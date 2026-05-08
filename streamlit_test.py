@@ -29,8 +29,8 @@ def load_resources():
     # Gemini 모델 설정 (멀티모달 처리를 위해 3.1-flash-lite-preview 권장)
     gemini_model = genai.GenerativeModel('gemini-3.1-flash-lite-preview')
     
-    # Aegis 모델 로드 (경로는 본인의 환경에 맞게 수정)
-    AEGIS_MODEL_PATH = "D:/PJ/AI_Aegis_PJ(개인)/mdoel/Aegis_Ko_v7" # 모델 기준 경로
+    # Aegis 모델 로드 (허깅페이스에서 모델 로드)
+    AEGIS_MODEL_PATH = "KwanHong/Aegis_Ko" # 허깅페이스 모델 경로
     print("🔄 [System] Aegis 보안 모델을 로드합니다")
     tokenizer = AutoTokenizer.from_pretrained(AEGIS_MODEL_PATH)
     aegis_model = AutoModelForSequenceClassification.from_pretrained(AEGIS_MODEL_PATH)
@@ -39,7 +39,8 @@ def load_resources():
     # [RAG 모델 및 DB 연결]
     print("🔄 [System] RAG 임베딩 모델 및 벡터 DB 로드 중...")
     embed_model = SentenceTransformer('jhgan/ko-sroberta-multitask') # 한국어 최적화 모델
-    db_client = chromadb.PersistentClient(path="D:/PJ/AI_Aegis_PJ(개인)/Database/product_db")
+    db_path = os.path.join(os.getcwd(), "Database", "product_db")
+    db_client = chromadb.PersistentClient(path=db_path)
     collection = db_client.get_or_create_collection(name="shopping_items")
     
     return gemini_model, tokenizer, aegis_model, embed_model, collection
