@@ -1,0 +1,4 @@
+# 제미나이 api 키 값
+GEMINI_API_KEY="구글 AI 스튜디오에서 생성한 Gemini API 키 값"  # 키 입력시 "" 없이 입력(예시 참고)
+# 예시: GEMINI_API_KEY=AIzaSyBv1...랜덤난수...SfHgGCOQs
+# 구글 AI 스튜디오(API 키 생성): https://aistudio.google.com/u/2/api-keys
