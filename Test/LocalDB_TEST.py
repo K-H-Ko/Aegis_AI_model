@@ -16,7 +16,7 @@ def add_product(p_id, name, desc, category, price):
     combined_text = f"[{category}] {name}: {desc}"
     vector = embed_model.encode(combined_text).tolist()
     
-    collection.add(
+    collection.add(\
         ids=[p_id],
         embeddings=[vector],
         metadatas=[{"name": name, "category": category, "price": price, "desc": desc}]

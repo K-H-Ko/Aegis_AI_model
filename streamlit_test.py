@@ -9,7 +9,7 @@ import re
 from PIL import Image
 from sentence_transformers import SentenceTransformer
 from transformers import AutoTokenizer, AutoModelForSequenceClassification
-
+load_dotenv()
 # =====================================================================
 # 1. 초기 설정 및 모델 로드 
 # =====================================================================
