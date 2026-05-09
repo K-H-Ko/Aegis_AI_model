@@ -1,5 +1,9 @@
 # 🛡️ Aegis(Shopping RAG Chatbot Security Filter) <br>
 
+<br>
+<img src="Test/Aegis_test.gif" width="100%" alt="Aegis 시연 영상">
+<br>
+
 RAG 기반 온라인쇼핑몰 챗봇 AI 보안 모델
 
 > **"AI 기술의 발전만큼 교묘해진 공격 기법, 딥러닝 기반의 전처리 보안 모델로 LLM 기반 RAG 시스템의 안전을 보장합니다."**
